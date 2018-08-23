@@ -31,3 +31,15 @@ This Application has developed using Microsoft Visual Studio 2015 with Microsoft
 
 ![Dashboad Screen](https://github.com/rajibsahani29/Easyway/blob/master/dashboard.png?raw=true "Dashboad Screen")
 
+<b>New Booking Form</b>
+
+![New Booking Form](https://github.com/rajibsahani29/Easyway/blob/master/7.png?raw=true "New Booking Form")
+
+<b>Search Booking Form Screen</b>
+
+![Search Booking Form](https://github.com/rajibsahani29/Easyway/blob/master/2.png?raw=true "Search Booking Form")
+
+<b>View Booking Form Screen</b>
+
+![View Booking Form](https://github.com/rajibsahani29/Easyway/blob/master/3.png?raw=true "View Booking Form")
+
