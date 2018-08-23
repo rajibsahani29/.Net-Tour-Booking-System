@@ -1,0 +1,157 @@
+/**
+ * Invoice Style Sheet
+ *
+ * Contains styling specific to the view invoice page.
+ *
+ * @project   WHMCS
+ * @version   1.0
+ * @author    WHMCS Limited <development@whmcs.com>
+ * @copyright Copyright (c) WHMCS Limited 2005-2015
+ * @license   http://www.whmcs.com/license/
+ * @link      http://www.whmcs.com/
+ */
+
+body {
+    background-color: #efefef;
+}
+
+/* Container Responsive Behaviour */
+
+.print-container {
+    margin: 15px auto;
+    padding: 10px;
+    max-width: 850px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+}
+
+@media  (max-width: 895px) {
+    .print-container {
+        margin: 15px;
+    }
+}
+
+@media  (max-width: 767px) {
+    .print-container {
+        padding: 45px 45px 70px 45px;
+    }
+}
+
+/* print Status Formatting */
+
+.print-container .print-status {
+    margin: 20px 0 0 0;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* print Status Colors */
+
+.unpaid {
+    color: #cc0000;
+}
+
+.paid {
+    color: #779500;
+}
+
+.refunded {
+    color: #224488;
+}
+
+.cancelled {
+    color: #888;
+}
+
+.collections {
+    color: #ffcc00;
+}
+
+/* Payment Button Formatting */
+
+.print-container .payment-btn-container {
+    margin-top: 5px;
+    text-align: center;
+}
+
+    .print-container .payment-btn-container table {
+        margin: 0 auto;
+    }
+
+/* Text Formatting */
+
+.print-container .small-text {
+    font-size: 0.9em;
+}
+
+/* print Items Table Formatting */
+
+.print-container td.total-row {
+    background-color: #f8f8f8;
+}
+
+.print-container td.no-line {
+    border: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc
+}
+
+    .btn-default.focus,
+    .btn-default:focus {
+        color: #333;
+        background-color: #e6e6e6;
+        border-color: #8c8c8c
+    }
+
+    .btn-default.active,
+    .btn-default:active,
+    .btn-default:hover,
+    .open > .dropdown-toggle.btn-default {
+        color: #333;
+        background-color: #e6e6e6;
+        border-color: #adadad
+    }
+
+        .btn-default.active.focus,
+        .btn-default.active:focus,
+        .btn-default.active:hover,
+        .btn-default:active.focus,
+        .btn-default:active:focus,
+        .btn-default:active:hover,
+        .open > .dropdown-toggle.btn-default.focus,
+        .open > .dropdown-toggle.btn-default:focus,
+        .open > .dropdown-toggle.btn-default:hover {
+            color: #333;
+            background-color: #d4d4d4;
+            border-color: #8c8c8c
+        }
