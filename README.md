@@ -21,13 +21,13 @@ This Application has developed using Microsoft Visual Studio 2015 with Microsoft
 
 <b>Project Structure Screen</b>
 
-![Project Structure Screen](https://github.com/rajibsahani29/MSAccess-.Net-Migration/blob/master/1.png?raw=true "Project Structure Screen")
+![Project Structure Screen](https://github.com/rajibsahani29/Easyway/blob/master/1.png?raw=true "Project Structure Screen")
 
 <b>Login Screen</b>
 
-![Login Screen](https://github.com/rajibsahani29/MSAccess-.Net-Migration/blob/master/1.png?raw=true "Login Screen")
+![Login Screen](https://github.com/rajibsahani29/Easyway/blob/master/1.png?raw=true "Login Screen")
 
 <b>Dashboad Screen</b>
 
-![Dashboad Screen](https://github.com/rajibsahani29/MSAccess-.Net-Migration/blob/master/4.png?raw=true "Dashboad Screen")
+![Dashboad Screen](https://github.com/rajibsahani29/Easyway/blob/master/dashboard.png?raw=true "Dashboad Screen")
 
