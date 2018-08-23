@@ -5,7 +5,7 @@ Easyway this is a Tour Management System.
 This Project is developed in Vb.net with 3 tier architecture with web dependency.
 
 
-<b>Process<b>
+<b>Process</b>
 
 This system is a complete tour booking system, which have many master screen like Staff, Accom Facility, Room type, Room facility, room option, breakfast, Diary Event Status, Route, Stage, Booking Fee, Marketing Source, Extra Service, Baggage Service, Agents, Client etc.
 
@@ -21,7 +21,7 @@ This Application has developed using Microsoft Visual Studio 2015 with Microsoft
 
 <b>Project Structure Screen</b>
 
-![Project Structure Screen](https://github.com/rajibsahani29/Easyway/blob/master/1.png?raw=true "Project Structure Screen")
+![Project Structure Screen](https://github.com/rajibsahani29/Easyway/blob/master/6.png?raw=true "Project Structure Screen")
 
 <b>Login Screen</b>
 
