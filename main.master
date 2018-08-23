@@ -1,0 +1,724 @@
+<%@ Master Language="VB" CodeFile="main.master.vb" Inherits="main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><!--[if lte IE 9 ]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+
+<!-- iPad Settings -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+<!-- iPad Settings End -->
+
+<title>Easyways Software</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
+
+<!-- iOS ICONS -->
+<link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone4.png" />
+<link rel="apple-touch-startup-image" href="touch-startup-image.png">
+<!-- iOS ICONS END -->
+
+<!-- STYLESHEETS -->
+
+<link rel="stylesheet" href="../css/reset.css" media="screen" />
+<link rel="stylesheet" href="../css/grids.css" media="screen" />
+<link rel="stylesheet" href="../css/ui.css" media="screen" />
+<link rel="stylesheet" href="../css/forms.css" media="screen" />
+<link rel="stylesheet" href="../css/new.css" media="screen" />
+<link rel="stylesheet" href="../css/device/general.css" media="screen" />
+<link rel="stylesheet" href="../css/common.css" media="screen" />
+<!--[if !IE]><!-->
+<link rel="stylesheet" href="../css/device/tablet.css" media="only screen and (min-width: 768px) and (max-width: 991px)" />
+<link rel="stylesheet" href="../css/device/mobile.css" media="only screen and (max-width: 767px)" />
+<link rel="stylesheet" href="../css/device/wide-mobile.css" media="only screen and (min-width: 480px) and (max-width: 767px)" />
+<!--<![endif]-->
+<link rel="stylesheet" href="../css/jquery.uniform.css" media="screen" />
+<link rel="stylesheet" href="../css/jquery.popover.css" media="screen">
+<link rel="stylesheet" href="../css/jquery.itextsuggest.css" media="screen">
+<link rel="stylesheet" href="../css/themes/lightblue/style.css" media="screen" />
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+ <link href="/css/print.css" rel="stylesheet" />
+
+<!--Accordion><!-->   
+ 
+    <link href="../css/accordionmenu.css" rel="stylesheet" />
+    <link href="../css/loading.css" rel="stylesheet" />
+
+<!--Popup-->   
+<link type='text/css' href='../css/basic.css' rel='stylesheet' media='screen' />
+
+<!-- STYLESHEETS END -->
+
+<!--[if lt IE 9]>
+<script src="/js/html5.js"></script>
+<script type="text/javascript" src="/js/selectivizr.js"></script>
+<![endif]-->
+        <script src="//code.jquery.com/jquery-1.7.min.js"></script>
+
+    <script>window.jQuery || document.write("<script src='../js/jquery.min.js'>\x3C/script>")</script>
+<asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body style="overflow: hidden;">
+
+    <div runat="server"  id="feedback_layer" style="opacity:0; z-index:999999;"> 
+        <asp:Label runat="server" class="feedback_layer_info" Text="hello!" ID="feedback_layer_text"></asp:Label>
+        </div>   
+
+                                               
+                         <div runat="server"  id="feedback_layer2" style="opacity:0; z-index:999999;"> 
+        <asp:Label runat="server" class="feedback_layer_warning" Text="hello!" ID="feedback_layer_text2"></asp:Label>
+        </div>    
+
+                      <div id="switch" class="switch">
+      
+        <div class="top_container">
+
+
+               <div class="grid_12" style="padding-top:5px;">
+                        <ul class="toolbar clearfix fl">
+                            <li>
+                                <a href="#" title="Activity" class="icon-only" id="activity-button">
+                                    <img src="../images/navicons-small/77.png" alt=""/>
+                                  
+                                </a>
+                            </li>
+                          
+                        </ul>
+                        
+                       
+                    </div>
+          
+               
+             
+                
+             <div class="user-info fr" >
+                            <b style="color:#fff">Welcome <a href="#"><asp:Label ID="LABEL_LoginUserName" runat="server" Text="" />&nbsp;&nbsp;&nbsp;</a></b>
+                        </div><br />
+                   <div class="clockbox" id="clockbox"> Place Date and Time Here</div>
+         </div> 
+
+
+                   </div>
+       
+      
+ 
+				<form autocomplete="off" runat="server" >
+
+
+  
+
+
+     
+
+
+    <div id="loading"> 
+
+        <script type = "text/javascript"> 
+            document.write("<div id='loading-container'><p id='loading-content'>" +
+                           "<img id='loading-graphic' width='16' height='16' src='../images/ajax-loader-abc4ff.gif' /> " +
+                           "Loading...</p></div>");
+        </script> 
+
+</div>
+
+    <div id="wrapper" >
+        <header><div class="ew_logo" ></div><!--logo-->
+           <a href="logout.aspx" title="Logout" class="button icon-with-text fr" style="margin-top:30px;"><img src="../images/navicons-small/129.png" alt=""/>Logout</a>
+            <nav>
+                <div class="container_12">
+
+
+
+                   
+                </div>
+            </nav>
+        </header>
+        
+        <section>
+            <!-- Sidebar -->
+
+            
+            <aside>
+                <nav class="drilldownMenu" style="background-color:#fff" >
+                    <h1>
+                        <span class="title">Main Menu</span>
+                        <button title="Go Back" class="back">Back</button>
+                    </h1>
+               
+                       
+                        
+                    <ul class="tlm">
+                        <li class="hasul">
+                            <a href="#"><img src="../images/navicons/111.png" alt="" /><span>Administration</span></a>
+
+                            <ul>
+                                <li class="hasul">
+                                    <a href="#"><img src="../images/navicons/112.png" alt="" /><span>Staff</span></a>
+                                    <ul>
+                                        <li><a href="staff_new.aspx" title="Add New Staff"><span>Add New Staff</span></a></li>
+                                        <li><a href="staff_password.aspx" title="Update Password"><span>Update Password</span></a></li>
+                                        <li><a href="staff_view.aspx" title="View Staff"><span>View Staff</span></a></li>
+                                    </ul>
+
+
+                                </li>
+
+                                <li class="hasul">
+                                    <a href="#"><img src="../images/navicons/19.png" alt="" /><span>Accom. Options</span></a>
+
+                                    <ul>
+
+                                        <li><a href="accom_options_facilities.aspx" title="Add & Edit Accommodation Facilities"><span>Add & Edit Accom. Facilities</span></a></li>
+                                        <li><a href="accom_options_room_types.aspx" title="Add & Edit Room Types"><span>Add & Edit Room Types</span></a></li>
+                                        <li><a href="accom_options_room_facilities.aspx" title="Add & Edit Room Facilities"><span>Add & Edit Room Facilities</span></a></li>
+                                        <li><a href="accom_options_room_type_options.aspx" title="Room Type Options"><span>Add & Edit Room Options</span></a></li>
+                                        <li><a href="accom_options_breakfast.aspx" title="Add & Edit Breakfast Types"><span>Add & Edit Breakfast Types</span></a></li>
+                                         <li><a href="accom_options_dog.aspx" title="Add & Edit Dog Information"><span>Add & Edit Dog Information</span></a></li>
+
+                                        <li><a href="accom_options_membership.aspx" title="Add & Edit Memberships"><span>Add & Edit Memberships</span></a></li>
+                                        <li><a href="accom_options_diary_event.aspx" title="Add & Edit Diary Event Status"><span>Add & Edit Diary Event Status</span></a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="hasul">
+                                    <a href="#"><img src="../images/navicons/20.png" alt="" /><span>Booking Options</span></a>
+
+
+                                    <ul>
+
+
+                                        <li><a href="booking_options_fee.aspx" title="Edit Booking Fee"><span>Edit Booking Fee</span></a></li>
+                                        <li><a href="booking_options_payment.aspx" title="Add & Edit Payment Methods"><span>Add & Edit Payment Methods</span></a></li>
+
+                                        
+
+                                        <li><a href="booking_options_marketing.aspx" title="Add & Edit Marketing Source"><span>Add & Edit Marketing Source</span></a></li>
+
+                                        <li><a href="booking_options_stages.aspx" title="Add & Edit Stages"><span>Add & Edit Stages</span></a></li>
+
+                                        <li><a href="booking_options_routes.aspx" title="Add & Edit Routes"><span>Add & Edit Routes</span></a></li>
+
+                                        <li><a href="booking_options_route_stages.aspx" title="Add & Edit Route Stages"><span>Add & Edit Route Stages</span></a></li>
+
+                                        <li><a href="booking_options_distance_stages.aspx" title="Add & Edit Distances between Stages"><span>Add & Edit Distances</span></a></li>
+                                    </ul>
+                                </li>
+
+
+                                <li class="hasul">
+                                    <a href="#"><img src="../images/navicons/10.png" alt="" /><span>Extras</span></a>
+                                    <ul>
+                                           <li><a href="extras_new_type.aspx" title="Add Extras Type of Service"><span>Add Extra Type of Service</span></a></li>
+                                        <li><a href="extras_new.aspx" title="Add Extras / Supplier Service"><span>Add Extras</span></a></li>
+                                        <li><a href="extras_view.aspx" title="View & Edit Extras / Supplier Service"><span>View & Edit Extras</span></a></li>
+                                        <li><a href="extras_link.aspx" title="Link Extras to a Route-Stage"><span>Link Extras</span></a></li>
+                                    </ul>
+                                </li>
+
+                                 <li class="hasul">
+                                    <a href="#"><img src="../images/navicons/37.png" alt="" /><span>Baggage</span></a>
+                                    <ul>
+                                          
+                                        <li><a href="extras_baggage_new.aspx" title="Add Baggage Service"><span>Add Baggage</span></a></li>
+                                        <li><a href="extras_baggage_view.aspx" title="View & Edit Baggage Service"><span>View & Edit Baggage</span></a></li>
+                                        <li><a href="extras_baggage_link.aspx" title="Link Baggage to a Route-Stage"><span>Link Baggage</span></a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="hasul">
+                                    <a href="#"><img src="../images/navicons/123.png" alt="" /><span>Agents</span></a>
+                                    <ul>
+                                        <li><a href="agents_new.aspx" title="Add Add Agents"><span>Add Agents</span></a></li>
+                                        <li><a href="agents_view.aspx" title="View & Edit Agents"><span>View & Edit Agents</span></a></li>
+                                        <li><a href="agent_photos.aspx" title="Add & Edit Agent Logo"><span>Add & Edit Agent Logo</span></a></li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="hasul">
+                                    <a href="#"><img src="../images/navicons/53.png" alt="" /><span>Accommodation</span></a>
+
+
+                                    <ul>
+
+
+                                        <li><a href="accom_new.aspx" title="Add New Accommodation"><span>Add New Accommodation</span></a></li>
+                                        <li><a href="accom_view.aspx" title="Add & Edit Accommodation"><span>Edit Accommodation</span></a></li>
+
+                                         <li><a href="accom_search.aspx" title="View Accommodation Complete"><span>View Accommodation</span></a></li>
+
+                                        <li><a href="accom_photos.aspx" title="Add & Edit Accommodation Photos"><span>Add & Edit Photos</span></a></li>
+
+                                        <li><a href="accom_docs.aspx" title="Add / Delete Accommodation Docs - Staff Only"><span>Add / Delete Documents</span></a></li>
+                                        
+                                        <li><a href="accom_add_rooms.aspx" title="Add New Room Type for Accommodation"><span>Add New Room Type</span></a></li>
+
+                                        <li><a href="accom_room_view.aspx" title="View Room Types for Accommodation"><span>View Room Type</span></a></li>
+
+                                        <li><a href="accom_link.aspx" title="Add Accommodation to Stage"><span>Link Accom-Stage</span></a></li>
+
+
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+                      
+
+                        <li class="current"><a href="dashboard.aspx" title="Dashboard"><img src="../images/navicons/81.png" alt="" /><span>Dashboard</span></a></li>
+
+
+
+                        <li class="hasul">
+                            <a href="#"><img src="../images/navicons/83.png" alt="" /><span>Bookings</span></a>
+                            <ul>
+                                <li><a href="bookings_enquiry.aspx" title="New Enquiry"><img src="../images/navicons/83.png" alt="" /><span>New Enquiry</span></a></li>
+
+                                <li><a href="bookings_search.aspx" title="View Bookings"><img src="../images/navicons/104.png" alt="" /><span>View Bookings</span></a></li>
+
+                            
+                                <li><a href="reports_status_all.aspx" title="Booking Status Report"><img src="../images/navicons/17.png" alt="" /><span>Booking Status Report</span></a></li>   
+
+                                <li><a href="bookings_new_client.aspx" title="New Client"><img src="../images/navicons/83.png" alt="" /><span>New Client</span></a></li>
+
+                                <li><a href="bookings_edit_client.aspx" title="View Client"><img src="../images/navicons/104.png" alt="" /><span>View & Edit Client</span></a></li>
+
+								
+								<li class="hasul">
+                            <a href="#"><img src="../images/navicons/83.png" alt="" /><span>Diaries</span></a>
+                            <ul>
+                                <li><a href="accom_diary_add.aspx" title="Add & Edit Accommodation Diary Event"><img src="../images/navicons/83.png" alt="" /><span>Add/Edit Accom Diary Event</span></a></li>
+
+                             
+                                
+                                <li><a href="general_diary_add.aspx" title="Add & Edit Diary General Event"><img src="../images/navicons/83.png" alt="" /><span>Add/Edit General Diary Event</span></a></li>
+
+                                   <li><a href="accom_diary_view.aspx" title="View Diary"><img src="../images/navicons/104.png" alt="" /><span>View Diary</span></a></li>
+
+
+                                <li><a href="reports_live_walkers.aspx" title="View Walkers Diary"><img src="../images/navicons/104.png" alt="" /><span>View Walkers Diary</span></a></li>
+							</ul>
+                            </ul>
+                        </li>
+
+                         <li class="hasul">
+                            <a href="#"><img src="../images/navicons/17.png" alt="" /><span>Reports</span></a>
+                                <ul>
+                             <li class="hasul">
+                                    <a href="#"><span>Bookings</span></a>
+                                    <ul>
+                                        <li><a href="reports_bookings_basic_Stats.aspx" title="Basic Statistics"><span>Basic Statistics</span></a></li>
+                                          <li><a href="reports_bookings_indepth_search.aspx" title="In-Depth Search"><span>In-Depth Search</span></a></li>
+                                         <li><a href="reports_bookings_search_criteria.aspx" title="Search By Critera"><span>Search by Criteria</span></a></li>
+
+                                        
+                                      <li><a href="reports_bookings_all_walks_date.aspx" title="All Walks by Date"><span>All Walks by Date</span></a></li> 
+                        
+                                        <li><a href="reports_bookings_walks_route_start_agent.aspx" title="Walks by Route/Date/Agent"><span>Walks by Route/Date/Agent</span></a></li>
+
+                                             <li><a href="reports_agents_route_date.aspx" title="Agent Bookings by Route/Date"><span>Agent Bookings Route/Date</span></a></li>
+                                        
+                                        <li><a href="reports_agent_booking.aspx" title="Bookings per Agent"><span>Bookings per Agent</span></a></li>
+
+                                          <li><a href="reports_bookings_no_baggage_extras.aspx" title="Bookings with no Baggage/Extras"><span>No Extras/Baggage</span></a></li>
+                                    </ul>
+
+
+                                </li>
+
+                                     <li class="hasul">
+                                    <a href="#"><span>Payments</span></a>
+                                    <ul>
+                                        <li><a href="reports_bookings_payments_rec_out.aspx" title="Client Payments"><span>Client Payments</span></a></li>
+                                           <li><a href="reports_supplier_payments_due.aspx" title="Payments Due to Suppliers"><span>Payments Due to Suppliers</span></a></li>
+                                          <li><a href="reports_clients_to_be_inv.aspx" title="Bookings Not Invoiced"><span>Clients Not Invoiced</span></a></li>
+                                        <li ><a href="reports_agent_invoiced.aspx" title="Agents Invoicing"><span>Agents Invoicing</span></a>  </li>
+
+
+                                        <li><a href="reports_taxi_invoiced.aspx" title="Extras Invoices"><span>Extras Invoicing</span></a></li>
+                                          <li><a href="reports_baggage_invoiced.aspx" title="Baggage Invoicing"><span>Baggage Invoicing</span></a></li>
+                                     
+                                      
+                                  </ul>
+
+
+                                </li>
+
+                                     <li class="hasul">
+                                    <a href="#"><span>Accommodation</span></a>
+                                    <ul>
+                                        <li><a href="reports_accom_bookings.aspx" title="Number of Bookings per Accom"><span>No. of Bookings/Accom</span></a></li>
+                                          <li><a href="reports_accomo_eval.aspx" title="Evaluation Results"><span>Evaluation Results</span></a></li>
+                                        <li><a href="reports_accom_commision.aspx" title="Commission Due"><span>Commission Due</span></a></li>
+                                      
+                                    </ul>
+
+
+                                </li>
+                                     <li class="hasul">
+                                    <a href="#"><span>Commission</span></a>
+                                    <ul>
+       
+ <li><a href="reports_taxi_financial.aspx" ><span>Extras (per supplier)</span></a></li>
+<li><a href="reports_baggage_financial.aspx" ><span>Baggage (per supplier)</span></a></li>
+                                        <li><a href="reports_extras_baggage_commission.aspx" ><span>Baggage/Extras (overall)</span></a></li>
+                                           <li><a href="reports_cc_commision.aspx" ><span>Credit Card Commission</span></a></li>
+                                            </ul>
+
+
+
+                                      
+
+
+                                </li>
+ <li class="hasul">
+                                    <a href="#"><span>Clients</span></a>
+                                    <ul>
+  <li><a href="reports_URL_sent.aspx" title="Tour Pack URL Sent"><span>Tour Pack URL Sent</span></a></li>
+  <li><a href="reports_url_click.aspx" title="URL Not Clicked"><span>URL Not Clicked</span></a></li>
+ <li><a href="reports_client_report1.aspx" ><span>Clients with Multiple Bookings</span></a></li>
+<li><a href="reports_client_report3.aspx" ><span>Marketing Source Stats</span></a></li>
+                                         <li><a href="reports_eval_easyways.aspx" title="Evaluation Forms"><span>Easyways Evaluations</span></a></li>
+                                            </ul>
+
+                                       
+                                       <li><a href="reports_financial.aspx" title="Financial Summary"><span>Financial Summary</span></a></li>  
+
+                                      
+                                    </ul>
+
+
+                                </li>
+
+
+
+                         <li ><a href="#" title=""><span></span></a></li>
+                           <li ><a href="#" title=""><span></span></a></li>
+                           <li ><a href="#" title=""><span></span></a></li>
+                           <li ><a href="#" title=""><span></span></a></li>
+                         <li ><a href="#" title=""><span></span></a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Sidebar End -->
+
+            <section>
+                <header>
+         
+         
+   
+                    <div class="container_12 clearfix">
+                        <a href="#menu" class="showmenu button">Menu</a>
+                          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+          
+            
+             
+                       
+                    </div>
+                </header>
+      </section>
+                <section id="main-content" class="clearfix">
+
+                                
+                        
+                </section>
+
+
+                <footer class="clearfix">
+                    <div class="container_12">
+                        <div class="grid_12">
+                         
+                        </div>
+                    </div>
+                </footer>
+            </section>
+
+            <!-- Main Section End -->
+      
+    </div>
+    
+    <!-- MAIN JAVASCRIPTS -->
+
+    <script type="text/javascript" src="../js/jquery.tools.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.uniform.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.js"></script>
+    <script type="text/javascript" src="../js/jquery.ui.totop.js"></script>
+    <script type="text/javascript" src="../js/jquery.itextsuggest.js"></script>
+    <script type="text/javascript" src="../js/jquery.itextclear.js"></script>
+    <script type="text/javascript" src="../js/jquery.hashchange.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.drilldownmenu.js"></script>
+    <script type="text/javascript" src="../js/jquery.popover.js"></script>
+ 
+    <!-- Popup -->
+    <script type='text/javascript' src="../js/jquery.simplemodal.js"></script>
+    <script type='text/javascript' src='../js/basic.js'></script>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/js/PIE.js"></script>
+    <script type="text/javascript" src="/js/ie.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="../js/global.js"></script>
+    <!-- MAIN JAVASCRIPTS END -->
+
+    <!-- LOADING SCRIPT -->
+    <script>
+    $(window).load(function(){
+        $("#loading").fadeOut(function(){
+            $(this).remove();
+            $('body').removeAttr('style');
+        });
+    });
+    </script>
+    <!-- LOADING SCRIPT -->
+    
+    <!-- POPOVERS SETUP-->
+    <div id="activity-popover" class="popover">
+        <header>
+            Activity
+        </header>
+        <section>
+            <div class="content">
+                <nav>
+                    <ul id="ulActivity">
+                        <li class="new"><a>No Activity Retrieved</a></li>
+                      
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#activity-button').popover('#activity-popover', { preventRight: true });
+            $('#notifications-button').popover('#notifications-popover', { preventRight: true });
+            $('#settings-button').popover('#settings-popover', { preventRight: true });
+
+
+            $("#activity-button").click(function () {
+                //alert("HEllo");
+                var doaction = "getActivityDetail";
+
+                $(document).ajaxStart(function () {
+                    $(".content").addClass("aiLoading");
+                });
+                $(document).ajaxComplete(function () {
+                    $(".content").removeClass("aiLoading");
+                    $(document).unbind("ajaxStart ajaxStop");
+                });
+                $.post('GetAjaxData.aspx', { DoAction: doaction }, function (responseText) {
+                    //alert(responseText.toString());
+                    if (responseText.toString() != "Error") {
+                        var objStaffDetail = JSON.parse(responseText)
+                        $("#ulActivity").empty();
+                        for (i = 0; i < objStaffDetail.length; i++) {
+                           $("#ulActivity").append('<li class="new"><a title="' + objStaffDetail[i] + '">' + objStaffDetail[i] + '</a></li>');
+                        }
+                    }
+                    else {
+                        alert("There was a system error. If this error persists please contact technical support.");
+                    }
+                });
+            });
+
+            var urlmenu = document.getElementById('menu_sub');
+            urlmenu.onchange = function () {
+                window.open(this.options[this.selectedIndex].value, '_self');
+            }
+
+
+
+
+
+            /**
+            * setup search
+            */
+            function googleSearch(q) {
+                $('#searchform .searchbox a').fadeOut()
+                $.ajax({
+                    url: 'php/google_search_results.php',
+                    data: 'q=' + encodeURIComponent(q),
+                    cache: false,
+                    success: function (response) {
+                        $('.search_results').html(response);
+                    }
+                });
+            }
+
+            // Set iTextSuggest
+            $('#searchform .searchbox').length && $('#searchform .searchbox').find('input[type=text]').iTextClear().iTextSuggest({
+                url: 'php/google_suggestions_results.php',
+                onKeydown: function (query) {
+                    googleSearch(query);
+                },
+                onChange: function (query) {
+                    googleSearch(query);
+                },
+                onSelect: function (query) {
+                    googleSearch(query);
+                },
+                onSubmit: function (query) {
+                    googleSearch(query);
+                },
+                onEmpty: function () {
+                    $('.search_results').html('');
+                }
+            }).focus(function () {
+                $('#wrapper > section > aside > nav > ul').fadeOut(function () {
+                    $('#searchform .search_results').show();
+                });
+                $(this).parents('#searchform .searchbox').animate({ marginRight: 70 }).next().fadeIn();
+            });
+
+            $('#searchform .searchcontainer').find('input[type=button]').click(function () {
+                $('#searchform .search_results').hide();
+                $('#searchform .searchbox').find('input[type=text]').val('');
+                $('#searchform .search_results').html('');
+                $('#wrapper > section > aside > nav > ul').fadeIn();
+                $('.searchbox', $(this).parent()).animate({ marginRight: 0 }).next().fadeOut();
+            });
+        });
+    </script>
+    <!-- POPOVERS SETUP END-->
+
+       <!-- ACCORDION-->
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            // Store variables
+
+            var accordion_head = $('.accordion > li > a'),
+                accordion_body = $('.accordion li > .sub-menu');
+
+            // Open the first tab on load
+           
+
+          accordion_head.first().addClass('active').next().slideDown('normal');
+
+        //    accordion_head.first().addClass('active').next().slideUp(0);
+
+           // accordion_head.first().removeClass('active');
+
+            // Click function
+
+            accordion_head.on('click', function (event) {
+
+                // Disable header links
+
+                event.preventDefault();
+
+                // Show and hide the tabs on click
+
+                if ($(this).attr('class') != 'active') {
+                    accordion_body.slideUp('normal');
+                    $(this).next().stop(true, true).slideToggle('normal');
+                    accordion_head.removeClass('active');
+                    $(this).addClass('active');
+                }
+                else if ($(this).attr('class ') == 'active') {
+
+                    $(this).removeClass('active');
+                    $(this).next().stop(true, true).slideToggle('normal');
+                    $(this).stop(true, true)
+
+                }
+
+            });
+
+        });
+
+	</script>
+
+    <script>
+        // When the user clicks on div, open the popup
+        function myFunction() {
+
+            var popup = document.getElementById("myPopup1");
+            popup.classList.toggle("showPOPUP");
+
+        }
+</script>
+
+<!-- TEXT BOXES-->
+
+    <script type="text/javascript" src="../js/jquery.itextclear.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('input[type=text], input[type=password], input[type=url], input[type=email], input[type=number], textarea', '.form').iTextClear();
+        });
+</script>
+
+
+ <!-- FORMS-->
+
+<script type="text/javascript" src="../js/jquery.itextclear.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('input[type=text], input[type=password], input[type=url], input[type=email], input[type=number], textarea', '.form').iTextClear();
+        });
+</script>
+
+ <!-- DATE/TIME-->
+<script type="text/javascript">
+        tday = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+        tmonth = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+        function GetClock() {
+            var d = new Date();
+            var nday = d.getDay(), nmonth = d.getMonth(), ndate = d.getDate(), nyear = d.getYear();
+            if (nyear < 1000) nyear += 1900;
+            var nhour = d.getHours(), nmin = d.getMinutes(), ap;
+            if (nhour == 0) { ap = " AM"; nhour = 12; }
+            else if (nhour < 12) { ap = " AM"; }
+            else if (nhour == 12) { ap = " PM"; }
+            else if (nhour > 12) { ap = " PM"; nhour -= 12; }
+
+            if (nmin <= 9) nmin = "0" + nmin;
+
+            document.getElementById('clockbox').innerHTML = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ap + "";
+        }
+
+        window.onload = function () {
+            GetClock();
+            setInterval(GetClock, 1000);
+        }
+</script>
+
+                      <script type="text/javascript">
+                          function printDiv(divID) {
+                              //Get the HTML of div
+                              var divElements = document.getElementById(divID).innerHTML;
+                              //Get the HTML of whole page
+                              var oldPage = document.body.innerHTML;
+
+
+
+                              //Reset the page's HTML with div's HTML only
+                              document.body.innerHTML =
+                                  "<html><head><title></title></head><body>" +
+                                  divElements + "</body>";
+
+                              //Print Page
+                              window.print();
+
+                              //Restore orignal HTML
+                              document.body.innerHTML = oldPage;
+
+
+                          }
+    </script>
+                </form>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<%@ Master Language="VB" CodeFile="blank.master.vb" Inherits="blank" %>
+
+
+<head><!--[if lte IE 9 ]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+
+<!-- iPad Settings -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+<!-- iPad Settings End -->
+
+<title>Easyways Software</title>
+
+<link rel="shortcut icon" href="favicon.ico">
+
+<!-- iOS ICONS -->
+<link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone4.png" />
+<link rel="apple-touch-startup-image" href="touch-startup-image.png">
+<!-- iOS ICONS END -->
+
+<!-- STYLESHEETS -->
+
+<link rel="stylesheet" href="../css/reset.css" media="screen" />
+<link rel="stylesheet" href="../css/grids.css" media="screen" />
+<link rel="stylesheet" href="../css/ui.css" media="screen" />
+<link rel="stylesheet" href="../css/forms.css" media="screen" />
+<link rel="stylesheet" href="../css/new.css" media="screen" />
+<link rel="stylesheet" href="../css/device/general.css" media="screen" />
+<link rel="stylesheet" href="../css/common.css" media="screen" />
+<!--[if !IE]><!-->
+<link rel="stylesheet" href="../css/device/tablet.css" media="only screen and (min-width: 768px) and (max-width: 991px)" />
+<link rel="stylesheet" href="../css/device/mobile.css" media="only screen and (max-width: 767px)" />
+<link rel="stylesheet" href="../css/device/wide-mobile.css" media="only screen and (min-width: 480px) and (max-width: 767px)" />
+<!--<![endif]-->
+<link rel="stylesheet" href="../css/jquery.uniform.css" media="screen" />
+<link rel="stylesheet" href="../css/jquery.popover.css" media="screen">
+<link rel="stylesheet" href="../css/jquery.itextsuggest.css" media="screen">
+<link rel="stylesheet" href="../css/themes/lightblue/style.css" media="screen" />
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+ <link href="/css/print.css" rel="stylesheet" />
+
+<!--Accordion><!-->   
+ 
+    <link href="../css/accordionmenu.css" rel="stylesheet" />
+    <link href="../css/loading.css" rel="stylesheet" />
+
+<!--Popup-->   
+<link type='text/css' href='../css/basic.css' rel='stylesheet' media='screen' />
+
+<!-- STYLESHEETS END -->
+
+<!--[if lt IE 9]>
+<script src="/js/html5.js"></script>
+<script type="text/javascript" src="/js/selectivizr.js"></script>
+<![endif]-->
+        <script src="//code.jquery.com/jquery-1.7.min.js"></script>
+
+    <script>window.jQuery || document.write("<script src='../js/jquery.min.js'>\x3C/script>")</script>
+<asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<form runat="server">
+    <div style="background-image:none;background-color:#fff;">
+      
+
+
+
+
+           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+ </div>
+                    <script type="text/javascript">
+                        function printDiv(divID) {
+                            //Get the HTML of div
+                            var divElements = document.getElementById(divID).innerHTML;
+                            //Get the HTML of whole page
+                            var oldPage = document.body.innerHTML;
+
+
+
+                            //Reset the page's HTML with div's HTML only
+                            document.body.innerHTML =
+                                "<html><head><title></title></head><body>" +
+                                divElements + "</body>";
+
+                            //Print Page
+                            window.print();
+
+                            //Restore orignal HTML
+                            document.body.innerHTML = oldPage;
+
+
+                        }
+    </script>
+                </form>
+
